@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndustrialConcrete | Güvenilir Hazır Beton Çözümleri</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-primary": "#c1c6d7",
+              "on-surface-variant": "#45474c",
+              "surface-container-low": "#f1f3ff",
+              "secondary-fixed": "#ffdcc5",
+              "secondary-container": "#fe9743",
+              "tertiary-container": "#1a2127",
+              "primary-fixed": "#dde2f3",
+              "primary-container": "#1a202c",
+              "on-primary-container": "#828796",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#161c22",
+              "background": "#f9f9ff",
+              "tertiary": "#04090e",
+              "outline": "#76777c",
+              "surface": "#f9f9ff",
+              "on-error": "#ffffff",
+              "surface-tint": "#585e6c",
+              "primary-fixed-dim": "#c1c6d7",
+              "tertiary-fixed-dim": "#c1c7cf",
+              "on-tertiary-fixed-variant": "#41474e",
+              "tertiary-fixed": "#dde3eb",
+              "on-background": "#161c27",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2a303d",
+              "error": "#ba1a1a",
+              "primary": "#030813",
+              "on-secondary-fixed": "#301400",
+              "on-secondary": "#ffffff",
+              "secondary": "#944b00",
+              "on-secondary-fixed-variant": "#703700",
+              "on-primary-fixed": "#161c27",
+              "on-primary": "#ffffff",
+              "inverse-on-surface": "#ecf0ff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#dde2f3",
+              "surface-dim": "#d4daea",
+              "on-tertiary-container": "#82888f",
+              "secondary-fixed-dim": "#ffb783",
+              "on-secondary-container": "#6b3500",
+              "surface-variant": "#dde2f3",
+              "error-container": "#ffdad6",
+              "on-primary-fixed-variant": "#414754",
+              "surface-container": "#e8eeff",
+              "surface-container-high": "#e3e8f9",
+              "on-surface": "#161c27",
+              "outline-variant": "#c6c6cc",
+              "surface-bright": "#f9f9ff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-headline { font-family: 'Manrope', sans-serif; }
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #dde2f3 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-background">
+<!-- TopNavBar -->
+<nav class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+<div class="text-2xl font-black tracking-tighter text-slate-900 dark:text-slate-50">IndustrialConcrete</div>
+<div class="hidden md:flex items-center space-x-8 text-sm font-medium Inter">
+<a class="text-orange-700 dark:text-orange-500 border-b-2 border-orange-700 dark:border-orange-500 pb-1" href="#">Corporate</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Products</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Projects</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Facilities</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Quality</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2.5 font-bold rounded-lg hover:bg-on-secondary-container transition-all scale-95 active:scale-100">
+                Get a Quote
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Industrial concrete mixer at large scale construction site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMc9QVNN6Zng9l5pBQh2CvrAZJYq_Ydd5xvfGpMqYQXz59dLfdOBHp9FWhNar6FH_MuMms-CXyguiOlHYS64jNSTNRXXH8oF3ecjwrF-kQPLoP7Dl1XANbc3SL4MruUENQkj9jqA0TwkJTSKkmhqCWmkoQoXNEwK_8H64q860peTxo1f3k45DsEtsf-sEJy1F3gTh16M5VkrDE187IMPPvPGY0eSm_LWwdSD3VfkyCY-IZ6DmKtILaKLKgbNOUFjtx72wk0sWph1qR"/>
+<div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+<div class="space-y-8">
+<h1 class="text-white text-6xl md:text-8xl font-extrabold tracking-tight leading-[1.1]">
+                    Güvenilir Hazır <span class="text-secondary">Beton</span> Çözümleri
+                </h1>
+<p class="text-primary-fixed text-lg md:text-xl max-w-xl leading-relaxed">
+                    Kalite, zamanında teslimat ve güçlü lojistik altyapısıyla Türkiye'nin dev projelerinde yer alıyoruz.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<button class="bg-secondary text-on-secondary px-8 py-4 font-bold text-lg rounded-lg transition-transform hover:-translate-y-1">
+                        Teklif Al
+                    </button>
+<button class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 font-bold text-lg rounded-lg transition-all hover:bg-white/20">
+                        Projelerimizi İncele
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust & Intro Section -->
+<section class="py-32 bg-surface overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row gap-16 items-start">
+<div class="md:w-1/3 sticky top-32">
+<span class="text-secondary font-bold tracking-widest text-sm uppercase block mb-4">KURUMSAL GÜVEN</span>
+<h2 class="text-4xl font-black text-primary leading-tight mb-6">İnşaatın Temelinde Biz Varız</h2>
+<p class="text-on-surface-variant leading-relaxed">Modern mühendislik çözümleri ve sürdürülebilir üretim anlayışımızla, betonun gücünü geleceğe taşıyoruz.</p>
+</div>
+<div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+<!-- Feature Cards -->
+<div class="bg-surface-container-lowest p-10 group hover:bg-primary-container transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white" data-icon="factory">factory</span>
+<h3 class="text-xl font-bold mb-4 group-hover:text-white">Yaygın Tesis Ağı</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary-container">Stratejik noktadaki tesislerimizle her bölgeye hızlı erişim sağlıyoruz.</p>
+</div>
+<div class="bg-surface-container-low p-10 group hover:bg-primary-container transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white" data-icon="biotech">biotech</span>
+<h3 class="text-xl font-bold mb-4 group-hover:text-white">Kalite Kontrol</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary-container">Tam donanımlı laboratuvarlarımızda her metreküpü titizlikle test ediyoruz.</p>
+</div>
+<div class="bg-surface-container-low p-10 group hover:bg-primary-container transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white" data-icon="local_shipping">local_shipping</span>
+<h3 class="text-xl font-bold mb-4 group-hover:text-white">Güçlü Lojistik</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary-container">Geniş mikser ve pompa filomuzla kesintisiz beton dökümü sağlıyoruz.</p>
+</div>
+<div class="bg-surface-container-lowest p-10 group hover:bg-primary-container transition-all duration-500">
+<span class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white" data-icon="engineering">engineering</span>
+<h3 class="text-xl font-bold mb-4 group-hover:text-white">Deneyimli Teknik Ekip</h3>
+<p class="text-on-surface-variant group-hover:text-on-primary-container">Uzman mühendis kadromuzla projenize özel teknik destek sunuyoruz.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats/Counters Section -->
+<section class="bg-primary py-24 relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="space-y-2">
+<div class="text-5xl md:text-7xl font-black text-secondary">30+</div>
+<div class="text-primary-fixed text-sm font-bold uppercase tracking-widest">Yıllık Deneyim</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-7xl font-black text-white">10k+</div>
+<div class="text-primary-fixed text-sm font-bold uppercase tracking-widest">Tamamlanan Proje</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-7xl font-black text-secondary">15+</div>
+<div class="text-primary-fixed text-sm font-bold uppercase tracking-widest">Aktif Tesis</div>
+</div>
+<div class="space-y-2">
+<div class="text-5xl md:text-7xl font-black text-white">200+</div>
+<div class="text-primary-fixed text-sm font-bold uppercase tracking-widest">Mikser Kapasitesi</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="mb-16">
+<h2 class="text-4xl font-black text-primary mb-4">Üretim Portföyümüz</h2>
+<div class="h-1.5 w-24 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-px bg-outline-variant/20">
+<div class="bg-surface-container-lowest p-8 flex flex-col items-center text-center hover:bg-secondary group transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white" data-icon="foundation">foundation</span>
+<h3 class="font-bold group-hover:text-white">Hazır Beton</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 flex flex-col items-center text-center hover:bg-secondary group transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white" data-icon="architecture">architecture</span>
+<h3 class="font-bold group-hover:text-white">Özel/Teknik Beton</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 flex flex-col items-center text-center hover:bg-secondary group transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white" data-icon="construction">construction</span>
+<h3 class="font-bold group-hover:text-white">Proje Bazlı Üretim</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 flex flex-col items-center text-center hover:bg-secondary group transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white" data-icon="shipping">local_shipping</span>
+<h3 class="font-bold group-hover:text-white">Lojistik &amp; Sevkiyat</h3>
+</div>
+<div class="bg-surface-container-lowest p-8 flex flex-col items-center text-center hover:bg-secondary group transition-colors duration-300">
+<span class="material-symbols-outlined text-4xl mb-6 text-primary group-hover:text-white" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h3 class="font-bold group-hover:text-white">Kalite &amp; Laboratuvar</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Projects -->
+<section class="py-32 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="text-5xl font-black text-primary tracking-tighter">İmza Projelerimiz</h2>
+<p class="text-on-surface-variant mt-4 text-lg">Şehrin silüetini birlikte inşa ediyoruz.</p>
+</div>
+<button class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-secondary hover:border-secondary transition-colors">Tüm Projeler</button>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="group relative h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="Modern bridge architectural shot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtBMMBiYG3TC0fhA1NyB5HbRa9RQ_QZnBFBfPCT9Via0kvH8wxScR2kRcuAjqHrvymyg88hE1D2RwVwqFFyy74fXDMLPiP0gu9fGFjP48B3BSxlhkz5PomLiGAWaahK4SsbjKqfnkvbn3e-HzWtE_mZnJJt0P5gFifHp6Kh7ZLFp30ouOfA1iHadvDmvb92AmDDL3DJmiB_IPC5BIOB5972Dufv_xh_9GZCn5_4PE85bPdUyen24U3IyubB-UNtXXugM70pjyouR0X"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="text-secondary font-bold text-xs tracking-widest uppercase">Altyapı</span>
+<h4 class="text-2xl font-bold text-white mt-2">Kuzey Marmara Köprüsü</h4>
+<div class="flex gap-4 mt-4 text-white/60 text-sm">
+<span>İstanbul</span>
+<span>2022</span>
+</div>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="group relative h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="Modern high rise building construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdOMaIljfNhds_a1rJPhiMZmsO1NCT5zTRmY7P0gCdMsOg9IQBPe9lbyBHUcCVkMQ-YoGQ2kKvIp8YwUKNiJf0PAFt8HlGnGw-q6zIblnKkZhXkPk0k4hiJukHWG1WaVPwc3HYR9hufvsfXTH8HPk1Z_aNlPx7u1IjxsNDyqQBhyko0Ae46vDcm0kRh5G928GM6elsn6b_ensmM_R1gyQ3ZhjFEeegPCr8zX6Uu1jowC4abzxycFRhVR5DCiezcmtyHYmXOZPjwV3-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="text-secondary font-bold text-xs tracking-widest uppercase">Ticari</span>
+<h4 class="text-2xl font-bold text-white mt-2">Finans Merkezi Kuleleri</h4>
+<div class="flex gap-4 mt-4 text-white/60 text-sm">
+<span>Ataşehir</span>
+<span>2023</span>
+</div>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="group relative h-[500px] overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700" data-alt="Underground subway tunnel construction" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGsTfSU1u-bNnPaNN13Mw9bLa2-x2HaTwgR3muwkXcVic4lCXd0ypPv2oRt5DaaWTbWpNZx1HhJEgDZXuUM3iOS37EaLwlt1SQQO6Dm3cczgFGmnbNrpesso4T05i0hqGABn3R0Gr94XkIWVLnMb49kldKBbodzO_xum3-TYL-TGz8yytZMCF_ifFhaffFUKs9f9vKpnFEqlTImtbueehX1i92Uzww77b_NZEWUk1e5B0_KQ7aynPI1Ws9pMKA8boZjlUR_V3gWS08"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary to-transparent opacity-80"></div>
+<div class="absolute bottom-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+<span class="text-secondary font-bold text-xs tracking-widest uppercase">Ulaşım</span>
+<h4 class="text-2xl font-bold text-white mt-2">M7 Metro Hattı</h4>
+<div class="flex gap-4 mt-4 text-white/60 text-sm">
+<span>İstanbul</span>
+<span>2021</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Facilities/Map -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="space-y-8">
+<h2 class="text-4xl font-black text-primary">Operasyonel Güç ve Erişim</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                        Türkiye genelinde 15 aktif tesisimizle projelerinizin ihtiyacı olan beton hacmini, kalite standartlarından ödün vermeden en hızlı şekilde karşılıyoruz.
+                    </p>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="text-3xl font-bold text-primary block">1,5M m³</span>
+<span class="text-sm text-on-surface-variant">Yıllık Kapasite</span>
+</div>
+<div>
+<span class="text-3xl font-bold text-primary block">24/7</span>
+<span class="text-sm text-on-surface-variant">Kesintisiz Sevkiyat</span>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-4 font-bold flex items-center gap-2 hover:bg-primary/90 transition-all">
+                        Tesislerimizi Görüntüle
+                        <span class="material-symbols-outlined" data-icon="map">map</span>
+</button>
+</div>
+<div class="relative bg-surface-container-high aspect-square rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover opacity-80" data-alt="Topographic map of industrial facilities locations" data-location="Turkey" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiOoLtb0DJbm5fvyN1Ddttkw3tibsw505uvvgEjsMpUwYruVe1O01k6sbeFBPGoax2ZgW8GTskyRtMuC5OIfLwDpMPKrX5JWXC_ggOh_E-v6A-GSdE2IJm0Hj-fkB9UFbulSuT5ulz5Q44T5UaQcRFqEJH8ds7el8x49CADhSsIVy-pozQxA_-5bAR9GgrcXM2T2FuRg-Zi_jXedWj4BhmiFmz3GPGSjqkvlGiRit2xR3SSuzPiM0of2V1c7dC6zYVcep9-UWokCxI"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-4 h-4 bg-secondary rounded-full animate-ping"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sustainability & Quality -->
+<section class="py-24 bg-primary text-white">
+<div class="max-w-7xl mx-auto px-6 text-center space-y-16">
+<div class="max-w-2xl mx-auto space-y-4">
+<h2 class="text-4xl font-black">Sürdürülebilirlik &amp; Kalite</h2>
+<p class="text-on-primary-container">ISO standartlarında üretim yaparken, çevresel etkimizi minimize eden teknolojiler kullanıyoruz.</p>
+</div>
+<div class="grid md:grid-cols-4 gap-12">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4" data-icon="energy_savings_leaf">energy_savings_leaf</span>
+<h4 class="font-bold">Düşük Karbon</h4>
+<p class="text-sm text-on-primary-container mt-2">Eco-beton serimizle karbon ayak izini azaltıyoruz.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4" data-icon="recycling">recycling</span>
+<h4 class="font-bold">Geri Dönüşüm</h4>
+<p class="text-sm text-on-primary-container mt-2">Su ve agrega geri kazanım sistemleri.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4" data-icon="verified">verified</span>
+<h4 class="font-bold">ISO 9001 / 14001</h4>
+<p class="text-sm text-on-primary-container mt-2">Uluslararası standartlarda tescilli kalite.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-5xl text-secondary mb-4" data-icon="shield_with_heart">shield_with_heart</span>
+<h4 class="font-bold">İş Sağlığı (SEÇ)</h4>
+<p class="text-sm text-on-primary-container mt-2">Sıfır kaza politikası ve sürekli eğitim.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- News/Blog -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-black text-primary mb-12">Duyurular &amp; Haberler</h2>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-white border-b-4 border-transparent hover:border-secondary transition-all shadow-sm group">
+<img class="w-full h-48 object-cover" data-alt="Technician working in a laboratory" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyWBb8sU5rNZw2fetufxLuOQp1Oj05300t53SGoE-IceM9gjY6v3jKpiHh1imFKs5nZH1sgkNdI2hIPx8KhdhS0edJTvx-T7hTSVx4ydpuiiomNlbxkFBOTjd8Epnr_7_jS_Q5apLIKkjMr1y1PX-I5OGi86emgrDY4OymtzWltv_vIPFLAuKx1jiH7BYPQrqDeGLeFy6-ZunFhCfU0yo3INiN3Ct8XBQf79RtTs-z0GL-Hzj0rCYinUDd6nlxka10Q4UNIFSF6qwT"/>
+<div class="p-8">
+<span class="text-sm text-on-surface-variant">12 Mayıs 2024</span>
+<h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-secondary">Ar-Ge Merkezimizde Yeni Nesil Beton Testleri Başladı</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Dayanıklılığı %30 artıran özel beton karışımımız üzerinde çalışmalarımız devam ediyor...</p>
+</div>
+</div>
+<div class="bg-white border-b-4 border-transparent hover:border-secondary transition-all shadow-sm group">
+<img class="w-full h-48 object-cover" data-alt="Large construction machinery at a plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlAdVAUANz9z5aiYw_S3gTPXgG4kAj2eQiJOgl_xtbqf1JqqX7KhU2XziUwphajXHAMHC4eb01X__gmh8IgRHXsUjWJKmf_HimsUeD62thV1vb1e9QIocg2tUnqBwrWMOSfs09l9z-lhq9s1DqeaEmHtfqi8znhePAH1WtHh-t_Dxb80yvVhFbzDMhEQG_uQk113FgJy5Rv2yYZP7_PU0-xhr5XEPIFHxMEKQJFhFBAO8Hdq12kb_ThuVU3M8syuv-6PtIOgKqw4XL"/>
+<div class="p-8">
+<span class="text-sm text-on-surface-variant">05 Mayıs 2024</span>
+<h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-secondary">Ankara'daki 4. Tesisimiz Hizmete Girdi</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Bölgedeki projelerimize daha hızlı hizmet vermek adına kapasitemizi genişletiyoruz.</p>
+</div>
+</div>
+<div class="bg-white border-b-4 border-transparent hover:border-secondary transition-all shadow-sm group">
+<img class="w-full h-48 object-cover" data-alt="Team of engineers discussing on site" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBd1eAB8zv9IyqKvQ791KjgfequIJEkq8hUQu84kxUE7O-2XvSJeel3_NV1kb10EpLoXjQzO1q1W3yRnufwWV3B3sCUwK1NQ7dtkPbvbPmOjfzTRhTt5fL4CuCm2K5nFclWF040NXojYyNFgQ9YSid9CvjefVUSUPMZ9V9glgW33Yo7s91Y2M08wnvzPrK5msSJEGt2vRCipgw71lwSJgB8C3jLe4swjyEiP5gyPDRXIgNUAfZmP_XQNTOYQ_eWpRSvwqGnT_oImDMT"/>
+<div class="p-8">
+<span class="text-sm text-on-surface-variant">28 Nisan 2024</span>
+<h3 class="text-xl font-bold mt-2 mb-4 group-hover:text-secondary">Sustainability Award 2024 Finalistiyiz</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2">Çevre dostu üretim tekniklerimizle uluslararası arenada takdir edilmeye devam ediyoruz.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Map Form -->
+<section class="py-32 bg-primary-container text-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid md:grid-cols-2 gap-16">
+<div class="space-y-8">
+<h2 class="text-5xl font-black tracking-tight">Projeniz İçin Teklif Alın</h2>
+<p class="text-on-primary-container text-lg">Hacimli işlerden butik projelere kadar, uzman kadromuz sizin için en doğru çözümü sunmaya hazır.</p>
+<form class="space-y-6">
+<div class="grid md:grid-cols-2 gap-6">
+<input class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4" placeholder="Adınız Soyadınız" type="text"/>
+<input class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4" placeholder="E-posta Adresiniz" type="email"/>
+</div>
+<select class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4">
+<option>Hizmet Seçiniz</option>
+<option>Hazır Beton</option>
+<option>Teknik Beton</option>
+<option>Lojistik Destek</option>
+</select>
+<textarea class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4" placeholder="Proje Detayları" rows="4"></textarea>
+<button class="bg-secondary text-on-secondary px-10 py-4 font-bold rounded-lg hover:bg-secondary/90 transition-all w-full md:w-auto">Gönder</button>
+</form>
+</div>
+<div class="space-y-8">
+<div class="bg-primary p-12 space-y-6">
+<h3 class="text-2xl font-bold">Genel Merkez</h3>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-secondary" data-icon="location_on">location_on</span>
+<p class="text-on-primary-container">İş Kuleleri, Kule 3, Kat 12, Levent, İstanbul</p>
+</div>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-secondary" data-icon="call">call</span>
+<p class="text-on-primary-container">+90 (212) 555 01 23</p>
+</div>
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-secondary" data-icon="mail">mail</span>
+<p class="text-on-primary-container">info@industrialconcrete.com</p>
+</div>
+</div>
+<div class="h-64 bg-slate-800 grayscale">
+<img class="w-full h-full object-cover opacity-50" data-alt="City map layout in dark mode" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRri8dMBaX9xIlJQuHoAn7BlvxxxdB8XmPG3MpwFOSyiKZp8AOE1zusHrm7DJ7_bjTk1RcGXpe3Ri_LjCEtqS5LMheGNm4UqRY-6GBbVl5SFfwodghvuWVOr393zSngfH15WWqKYve8E7cJktRfbWa_M7QIIh0wX35LVC0MTcpzMoYoarvd5uSLXEM_1f0FhScXb3E45M7JqMnLC3l09Qyu6OCVii0e0jGJ6vQgZVwb5tZ2qDGRpZbpZsL6k9qptCejsyFmKm_64qL"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-950 dark:bg-black w-full pt-16 pb-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-8xl mx-auto">
+<div>
+<div class="text-xl font-black text-white mb-6">IndustrialConcrete</div>
+<p class="text-slate-400 Inter text-sm leading-relaxed">Güçlü lojistik, üstün kalite ve çevre dostu üretimle inşaat sektörünün güvenilir çözüm ortağı.</p>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-semibold mb-6">Hızlı Bağlantılar</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Kurumsal</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Ürün Portföyü</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Öne Çıkan Projeler</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Haberler</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-semibold mb-6">Yasal</h4>
+<ul class="space-y-3">
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Environmental Impact</a></li>
+<li><a class="text-slate-500 hover:text-orange-400 transition-colors hover:translate-x-1 inline-block" href="#">Sustainability Report</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-semibold mb-6">Bizi Takip Edin</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-slate-900 flex items-center justify-center text-white hover:bg-orange-500 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="public">public</span>
+</a>
+<a class="w-10 h-10 bg-slate-900 flex items-center justify-center text-white hover:bg-orange-500 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 bg-slate-900 flex items-center justify-center text-white hover:bg-orange-500 transition-all rounded-lg" href="#">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span>
+</a>
+</div>
+<div class="pt-6">
+<p class="text-slate-500 text-xs">Kariyer Portalımıza göz atın</p>
+<a class="text-orange-500 font-bold text-sm" href="#">Açık Pozisyonlar →</a>
+</div>
+</div>
+</div>
+<div class="max-w-8xl mx-auto px-8 mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-slate-400 Inter text-xs">© 2024 Industrial Excellence. All rights reserved.</p>
+<div class="flex gap-8">
+<span class="text-slate-600 text-[10px] tracking-widest uppercase">Concrete Infrastructure Turkey</span>
+<span class="text-slate-600 text-[10px] tracking-widest uppercase">Member of Global Builders Group</span>
+</div>
+</div>
+</footer>
+</body></html>

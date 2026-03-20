@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Allar Beton | Güvenilir Hazır Beton Çözümleri</title>
+    <link rel="icon" type="image/png" href="./fotograflar/logo.png" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-primary": "#c1c6d7",
+                        "on-surface-variant": "#45474c",
+                        "surface-container-low": "#f1f3ff",
+                        "secondary-fixed": "#ffdcc5",
+                        "secondary-container": "#fe9743",
+                        "tertiary-container": "#1a2127",
+                        "primary-fixed": "#dde2f3",
+                        "primary-container": "#1a202c",
+                        "on-primary-container": "#828796",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#161c22",
+                        "background": "#f9f9ff",
+                        "tertiary": "#04090e",
+                        "outline": "#76777c",
+                        "surface": "#f9f9ff",
+                        "on-error": "#ffffff",
+                        "surface-tint": "#585e6c",
+                        "primary-fixed-dim": "#c1c6d7",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "tertiary-fixed": "#dde3eb",
+                        "on-background": "#161c27",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2a303d",
+                        "error": "#ba1a1a",
+                        "primary": "#030813",
+                        "on-secondary-fixed": "#301400",
+                        "on-secondary": "#ffffff",
+                        "secondary": "#944b00",
+                        "on-secondary-fixed-variant": "#703700",
+                        "on-primary-fixed": "#161c27",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#ecf0ff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-highest": "#dde2f3",
+                        "surface-dim": "#d4daea",
+                        "on-tertiary-container": "#82888f",
+                        "secondary-fixed-dim": "#ffb783",
+                        "on-secondary-container": "#6b3500",
+                        "surface-variant": "#dde2f3",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed-variant": "#414754",
+                        "surface-container": "#e8eeff",
+                        "surface-container-high": "#e3e8f9",
+                        "on-surface": "#161c27",
+                        "outline-variant": "#c6c6cc",
+                        "surface-bright": "#f9f9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        .font-headline {
+            font-family: 'Manrope', sans-serif;
+        }
+
+        .blueprint-grid {
+            background-image: radial-gradient(circle, #dde2f3 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        #lightbox {
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        #lightbox.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        #lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 0.5rem;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        #lightbox.active img {
+            transform: scale(1);
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-background">
+    <!-- TopNavBar -->
+    <nav
+        class="bg-white/80 dark:bg-slate-950/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-slate-100 dark:border-slate-800 shadow-sm dark:shadow-none">
+        <div class="flex justify-between items-center w-full px-6 py-4 max-w-8xl mx-auto">
+            <a href="#" class="flex items-center gap-3">
+                <img src="./fotograflar/logo.png" alt="Allar Beton" class="h-10 w-auto object-contain" />
+            </a>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium Inter">
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                    href="#kurumsal">Kurumsal</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                    href="#urunler">Ürünler</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                    href="#projeler">Projeler</a>
+                <a class="text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                    href="#iletisim">İletişim</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#iletisim"
+                    class="hidden md:inline-block bg-secondary text-on-secondary px-6 py-2.5 font-bold rounded-lg hover:bg-on-secondary-container transition-all scale-95 active:scale-100">
+                    Teklif Al
+                </a>
+                <button id="mobile-menu-btn"
+                    class="md:hidden text-slate-900 dark:text-slate-50 flex items-center justify-center p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white/95 dark:bg-slate-950/95 backdrop-blur-lg border-b border-slate-100 dark:border-slate-800 transition-all">
+            <div class="flex flex-col px-6 py-6 space-y-6 text-base font-medium text-center">
+                <a class="mobile-link text-slate-600 dark:text-slate-400 hover:text-slate-900 hover:font-bold transition-all"
+                    href="#kurumsal">Kurumsal</a>
+                <a class="mobile-link text-slate-600 dark:text-slate-400 hover:text-slate-900 hover:font-bold transition-all"
+                    href="#urunler">Ürünler</a>
+                <a class="mobile-link text-slate-600 dark:text-slate-400 hover:text-slate-900 hover:font-bold transition-all"
+                    href="#projeler">Projeler</a>
+                <a class="mobile-link text-slate-600 dark:text-slate-400 hover:text-slate-900 hover:font-bold transition-all"
+                    href="#iletisim">İletişim</a>
+                <a href="#iletisim"
+                    class="mobile-link bg-secondary text-on-secondary py-3 px-6 font-bold rounded-lg mt-2 inline-block">Teklif
+                    Al</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img class="w-full h-full object-cover"
+                data-alt="Industrial concrete mixer at large scale construction site"
+                src="./assets/images/project_2.webp" />
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
+        </div>
+        <div class="relative z-10 max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <h1 class="text-white text-5xl md:text-8xl font-extrabold tracking-tight leading-[1.1]">
+                    Allar Beton <span class="text-secondary">Hazır Beton</span> Çözümleri
+                </h1>
+                <p class="text-primary-fixed text-lg md:text-xl max-w-xl leading-relaxed">
+                    Sağlam temeller için Allar Beton olarak güvenilir çözüm ortağınız olmaya devam ediyoruz. Gelişmiş
+                    hazır beton üretim altyapımız ile
+                    Gerede, Bolu ve çevresinde projelere yüksek kaliteli beton tedariki sağlıyoruz.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#iletisim"
+                        class="bg-secondary text-on-secondary px-8 py-4 font-bold text-lg rounded-lg transition-transform hover:-translate-y-1">
+                        İletişime Geç
+                    </a>
+                    <a href="#projeler"
+                        class="bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 font-bold text-lg rounded-lg transition-all hover:bg-white/20">
+                        Projelerimizi İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Trust & Intro Section (Hakkımızda) -->
+    <section id="kurumsal" class="py-32 bg-surface overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row gap-16 items-start">
+                <div class="md:w-1/3 md:sticky md:top-32">
+                    <span class="text-secondary font-bold tracking-widest text-sm uppercase block mb-4">ALLAR BETON
+                        HAKKINDA</span>
+                    <h2 class="text-4xl font-black text-primary leading-tight mb-6">İnşaatın Temelinde Allar Beton Var
+                    </h2>
+                    <p class="text-on-surface-variant leading-relaxed">Sektörde güven, kalite ve sürekliliği esas alarak
+                        faaliyet gösteren Allar Beton firmamız, hazır beton üretimi ve tedariki alanında güçlü altyapısı
+                        ve deneyimli
+                        ekibiyle hizmet vermektedir.</p>
+                </div>
+                <div class="md:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Feature Cards -->
+                    <div
+                        class="bg-surface-container-lowest p-10 group hover:bg-primary-container transition-all duration-500">
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white"
+                            data-icon="flag">flag</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-white">Misyonumuz</h3>
+                        <p class="text-on-surface-variant group-hover:text-on-primary-container">Müşterilerimize yüksek
+                            kaliteli ve güvenilir hazır beton sunmak, kaliteyi ve müşteri memnuniyetini ön planda
+                            tutmak.</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-10 group hover:bg-primary-container transition-all duration-500">
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white"
+                            data-icon="visibility">visibility</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-white">Vizyonumuz</h3>
+                        <p class="text-on-surface-variant group-hover:text-on-primary-container">Gerede ve çevresinde
+                            hazır beton sektöründe kalite, güven ve süreklilik denildiğinde ilk akla gelen firma olmak.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-surface-container-low p-10 group hover:bg-primary-container transition-all duration-500">
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white"
+                            data-icon="local_shipping">local_shipping</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-white">Hızlı Sevkiyat</h3>
+                        <p class="text-on-surface-variant group-hover:text-on-primary-container">Güçlü araç filomuz ve
+                            lojistik kabiliyetimiz sayesinde sevkiyatı zamanında ve planlı gerçekleştiriyoruz.</p>
+                    </div>
+                    <div
+                        class="bg-surface-container-lowest p-10 group hover:bg-primary-container transition-all duration-500">
+                        <span
+                            class="material-symbols-outlined text-secondary text-4xl mb-6 block group-hover:text-white"
+                            data-icon="eco">eco</span>
+                        <h3 class="text-xl font-bold mb-4 group-hover:text-white">Çevreye Duyarlı</h3>
+                        <p class="text-on-surface-variant group-hover:text-on-primary-container">Doğal kaynakların
+                            korunmasına katkı sağlarken sürdürülebilir bir hizmet sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Neden Allar Beton Section -->
+    <section class="bg-primary py-24 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 blueprint-grid"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="mb-16">
+                <h2 class="text-4xl font-black text-white mb-4">Neden Allar Beton?</h2>
+                <div class="h-1.5 w-24 bg-secondary"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Item 1 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">01</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Yüksek Kalite ve Dayanıklılık</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Standartlara tam uyumlu ve uzun ömürlü beton üretimi
+                            yapıyoruz. Dayanım her zaman önceliğimizdir.</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">02</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Hızlı Teslimat</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Geniş araç filomuz ve lojistik altyapımız ile
+                            siparişleri zamanında teslim ederek projenin ilerlemesini sağlarız.</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">03</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Profesyonel Ekip</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Uzman personelimiz her aşamada doğru mühendislik
+                            teknikleri ve güvenli uygulamayı garanti eder.</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">04</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Özel Çözümler</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Standart betonun yanı sıra katkılı, lifli veya
+                            kendiliğinden yerleşen betonlar gibi çözümleri de sunmaktayız.</p>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">05</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Çevreye Duyarlı Üretim</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Doğal kaynakları koruyan süreçler ile projelere ve
+                            çevreye değer katıyoruz.</p>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="flex gap-4">
+                    <span class="text-5xl font-black text-secondary">06</span>
+                    <div>
+                        <h4 class="font-bold text-white text-xl">Güvenilirlik</h4>
+                        <p class="text-primary-fixed text-sm mt-2">Gerede ve çevresinde sayısız proje referansına sahip
+                            olan Allar Beton her daim çözüm ortağınızdır.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section (Ürünlerimiz) -->
+    <section id="urunler" class="py-32 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl font-black text-primary mb-4">Ürünlerimiz</h2>
+                <div class="h-1.5 w-24 bg-secondary"></div>
+                <p class="mt-6 text-on-surface-variant max-w-3xl">Gelişmiş üretim teknolojileri ile donatılmış modern
+                    beton santralimizde her projeye uygun dayanım ve özellikte beton üretimi gerçekleştirmekteyiz.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Product 0 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">C16 Hazır Beton</h3>
+                    <p class="text-sm text-on-surface-variant">C16 hazır beton, düşük dayanım gerektiren projelerde
+                        kullanılan ekonomik ve pratik bir beton türüdür. Genellikle bahçe, kaldırım, küçük temeller,
+                        dolgu ve şap uygulamalarında tercih edilir. Kolay işlenebilirliği sayesinde hızlı uygulama
+                        imkânı sunar ve küçük ölçekli projeler için ideal bir çözümdür.</p>
+                </div>
+                <!-- Product 1 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">C20/25 Hazır Beton</h3>
+                    <p class="text-sm text-on-surface-variant">Düşük ve orta dayanım gerektiren projelerde kullanılan
+                        ekonomik ve pratik beton sınıfıdır. Grobeton ve zemin düzenlemede tercih edilir.</p>
+                </div>
+                <!-- Product 2 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">C25/30 Hazır Beton</h3>
+                    <p class="text-sm text-on-surface-variant">Konut projelerinde yaygın kullanılır. Kolon, kiriş ve
+                        döşeme gibi taşıyıcı elemanlarda güvenilir ve dengeli çözümler sunar.</p>
+                </div>
+                <!-- Product 3 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">C30/37 Hazır Beton</h3>
+                    <p class="text-sm text-on-surface-variant">Yüksek dayanım gerektiren projelerde tercih edilen güçlü
+                        betondur. Çok katlı binalarda üst düzey yapı güvenliği sağlar.</p>
+                </div>
+                <!-- Product 4 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">C35/45 ve Üzeri Özel Betonlar</h3>
+                    <p class="text-sm text-on-surface-variant">İleri mühendislik projeleri (köprü, viyadük ve sanayi
+                        tesisleri) için yüksek mukavemet ve üstün dayanım sunar.</p>
+                </div>
+                <!-- Product 5 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">KYB (Kendiliğinden Yerleşen Beton)</h3>
+                    <p class="text-sm text-on-surface-variant">Vibrasyon gerektirmeksizin kendi ağırlığı ile yayılan,
+                        ulaşması zor bölgelerde boşluksuz dolgu sağlayan modern bir çözümdür.</p>
+                </div>
+                <!-- Product 6 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm">
+                    <h3 class="font-bold text-xl mb-3">Lifli Beton</h3>
+                    <p class="text-sm text-on-surface-variant">İçerisine eklenen çelik veya sentetik lifler sayesinde
+                        çatlama direnci artırılmış, özellikle endüstriyel zeminler için mükemmeldir.</p>
+                </div>
+                <!-- Product 7 -->
+                <div
+                    class="bg-surface-container-lowest p-8 flex flex-col items-start border-l-4 border-transparent hover:border-secondary transition-all shadow-sm md:col-span-2 lg:col-span-3">
+                    <h3 class="font-bold text-xl mb-3">Pompa ile Dökülen Beton</h3>
+                    <p class="text-sm text-on-surface-variant">Ulaşımı zor veya yüksek katlı yapılarda betonun seri ve
+                        güvenli aktarımını sağlar. Modern pompa ekipmanlarımızla zaman tasarrufunu artırıyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Featured Projects (Projelerimiz) -->
+    <section id="projeler" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-16">
+                <div>
+                    <span class="text-secondary font-bold tracking-widest text-sm uppercase block mb-4">GÜCÜN
+                        YANSIMASI</span>
+                    <h2 class="text-5xl font-black text-primary tracking-tighter">Projelerimiz</h2>
+                    <p class="text-on-surface-variant mt-4 text-lg">Hizmet sunduğumuz saha ve projelerden çeşitli
+                        görünümler.</p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Photos loaded from provided files, optimized to WebP -->
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_1.webp" alt="Proje Görseli 1" />
+                </div>
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_12.webp" alt="Proje Görseli 2" />
+                </div>
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_4.webp" alt="Proje Görseli 3" />
+                </div>
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_7.webp" alt="Proje Görseli 4" />
+                </div>
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_10.webp" alt="Proje Görseli 5" />
+                </div>
+                <div class="group relative h-[400px] overflow-hidden rounded-md shadow-sm">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                        loading="lazy" src="./assets/images/project_13.webp" alt="Proje Görseli 6" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact & Map Form -->
+    <section id="iletisim" class="py-32 bg-primary-container text-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <h2 class="text-4xl md:text-5xl font-black tracking-tight">İletişime Geçin</h2>
+                    <p class="text-on-primary-container text-lg">Hazır beton siparişleri, teknik talepler veya
+                        sorularınız için profesyonel ekibimize ulaşabilirsiniz.</p>
+                    <form action="mailto:allarbeton@hotmail.com" method="POST" enctype="text/plain" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <input name="AdSoyad" required
+                                class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4"
+                                placeholder="Adınız Soyadınız" type="text" />
+                            <input name="Email" required
+                                class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4"
+                                placeholder="E-posta Adresiniz" type="email" />
+                        </div>
+                        <select name="Konu" required
+                            class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4">
+                            <option value="">Konu Seçiniz</option>
+                            <option value="Hazır Beton Siparişi">Hazır Beton Siparişi</option>
+                            <option value="Fiyat Teklifi">Fiyat Teklifi</option>
+                            <option value="Teknik Destek">Teknik Destek</option>
+                        </select>
+                        <textarea name="Mesaj" required
+                            class="bg-primary border-none text-white focus:ring-secondary w-full px-6 py-4"
+                            placeholder="Mesajınız" rows="4"></textarea>
+                        <button type="submit"
+                            class="bg-secondary text-on-secondary px-10 py-4 font-bold rounded-lg hover:bg-secondary/90 transition-all w-full md:w-auto">Gönder</button>
+                    </form>
+                </div>
+                <div class="space-y-8">
+                    <div class="bg-primary p-12 space-y-8">
+                        <h3 class="text-3xl font-bold">İletişim Bilgileri</h3>
+                        <div class="flex gap-4 items-start">
+                            <span class="material-symbols-outlined text-secondary text-2xl"
+                                data-icon="location_on">location_on</span>
+                            <div>
+                                <p class="text-white font-bold mb-1">Adres</p>
+                                <p class="text-on-primary-container">Yazıköyü Mevkii Gerede Organize Sanayi Bölgesi,
+                                    Gerede/Bolu</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="material-symbols-outlined text-secondary text-2xl" data-icon="call">call</span>
+                            <div>
+                                <p class="text-white font-bold mb-1">Telefon</p>
+                                <p class="text-on-primary-container">0(374) 333 00 00</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="material-symbols-outlined text-secondary text-2xl" data-icon="fax">fax</span>
+                            <div>
+                                <p class="text-white font-bold mb-1">Faks</p>
+                                <p class="text-on-primary-container">0(374) 333 00 01</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4 items-center">
+                            <span class="material-symbols-outlined text-secondary text-2xl" data-icon="mail">mail</span>
+                            <div>
+                                <p class="text-white font-bold mb-1">E-Posta</p>
+                                <p class="text-on-primary-container">allarbeton@hotmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Google Maps Embed -->
+                    <div class="w-full h-64 border-4 border-primary rounded-lg overflow-hidden relative">
+                        <iframe
+                            src="https://maps.google.com/maps?q=YAZIK%C3%96Y%C3%9C%20MEVK%C4%B0%C4%B0%20GEREDE%20ORGAN%C4%B0ZE%20SANAY%C4%B0%20B%C3%96LGES%C4%B0,%2014100%20Gerede%2FBolu&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-slate-950 dark:bg-black w-full pt-16 pb-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 max-w-8xl mx-auto">
+            <div class="col-span-1 md:col-span-2">
+                <a href="#" class="flex items-center gap-3 mb-6">
+                    <img src="./fotograflar/logo.png" alt="Allar Beton"
+                        class="h-10 w-auto object-contain bg-white rounded-md p-1" />
+                </a>
+                <p class="text-slate-400 Inter text-sm leading-relaxed max-w-md">Çevreye duyarlı üretim anlayışımızla
+                    doğal kaynakları korurken, güvenilir ve yüksek kaliteli hazır beton tedariğinde güçlü altyapımızla
+                    hizmetinizdeyiz.</p>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-white font-semibold mb-6">Hızlı Bağlantılar</h4>
+                <ul class="space-y-3">
+                    <li><a class="text-slate-500 hover:text-secondary transition-colors hover:translate-x-1 inline-block"
+                            href="#kurumsal">Kurumsal</a></li>
+                    <li><a class="text-slate-500 hover:text-secondary transition-colors hover:translate-x-1 inline-block"
+                            href="#urunler">Ürünlerimiz</a></li>
+                    <li><a class="text-slate-500 hover:text-secondary transition-colors hover:translate-x-1 inline-block"
+                            href="#projeler">Projelerimiz</a></li>
+                    <li><a class="text-slate-500 hover:text-secondary transition-colors hover:translate-x-1 inline-block"
+                            href="#iletisim">İletişim</a></li>
+                </ul>
+            </div>
+            <div class="space-y-4">
+                <h4 class="text-white font-semibold mb-6">Bizi Takip Edin</h4>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 bg-slate-900 flex items-center justify-center text-white hover:bg-[#E1306C] transition-all rounded-lg"
+                        href="https://www.instagram.com/allarbeton/" target="_blank" rel="noopener noreferrer">
+                        <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-8xl mx-auto px-8 mt-16 pt-8 border-t border-slate-900 flex flex-col md:flex-row justify-between items-center gap-4">
+            <p class="text-slate-400 Inter text-xs">© 2026 Allar Beton. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+    <!-- Lightbox Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.createElement('div');
+            lightbox.id = 'lightbox';
+            document.body.appendChild(lightbox);
+
+            const images = document.querySelectorAll('#projeler img');
+            images.forEach(image => {
+                image.classList.add('cursor-pointer');
+                image.addEventListener('click', () => {
+                    lightbox.classList.add('active');
+                    const img = document.createElement('img');
+                    img.src = image.src;
+                    while (lightbox.firstChild) {
+                        lightbox.removeChild(lightbox.firstChild);
+                    }
+                    lightbox.appendChild(img);
+                });
+            });
+
+            lightbox.addEventListener('click', e => {
+                if (e.target !== e.currentTarget) return;
+                lightbox.classList.remove('active');
+            });
+        });
+
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-link');
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+
+</html>
